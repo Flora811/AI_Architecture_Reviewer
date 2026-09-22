@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Architecture Reviewer</title>
+
+    <link rel="stylesheet" href="/static/style.css">
+    <script src="/static/script.js" defer></script>
+</head>
+
+<body>
+
+    <main class="container">
+
+        <header>
+            <h1>Architecture Reviewer</h1>
+            <p>
+                Upload your system architecture in Markdown format
+                to get a review.
+            </p>
+        </header>
+
+        <section class="upload-section">
+
+            <h2>Upload Architecture</h2>
+
+            <form id="uploadForm">
+
+                <input
+                    type="file"
+                    id="architectureFile"
+                    name="file"
+                    accept=".md"
+                    required
+                >
+
+                <button type="submit" id="reviewButton">
+                    Review Architecture
+                </button>
+
+            </form>
+
+            <p id="statusMessage" role="status" aria-live="polite"></p>
+
+        </section>
+
+        <section class="results-section" id="resultsSection" hidden>
+
+            <h2>Architecture Review</h2>
+
+            <p id="reviewFilename"></p>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>PROS</th>
+                        <th>CONS</th>
+                    </tr>
+                </thead>
+
+                <tbody id="reviewResults">
+                </tbody>
+            </table>
+
+        </section>
+
+    </main>
+
+</body>
+
+</html>
